@@ -1,0 +1,66 @@
+/* Full screen background */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* 🔥 gradient */
+  font-family: Arial, sans-serif;
+}
+
+/* Center everything */
+body > div {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login box */
+body > div > div {
+  background: white;
+  padding: 35px;
+  width: 340px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Title */
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Inputs */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Focus */
+input:focus {
+  border-color: #3498db;
+}
+
+/* Button */
+button {
+  width: 95%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Hover */
+button:hover {
+  background: #2980b9;
+}

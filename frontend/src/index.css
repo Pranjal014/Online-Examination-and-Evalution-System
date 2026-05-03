@@ -1,0 +1,45 @@
+/* Reset + Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  background: #f5f6fa;   /* Match your app theme */
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code styling */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background: #ecf0f1;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Remove default button outline */
+button:focus {
+  outline: none;
+}
+
+/* Scrollbar styling (optional but nice) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ecf0f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}

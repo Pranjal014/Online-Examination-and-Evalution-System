@@ -1,0 +1,75 @@
+/* Full page admin background */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Title */
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+.container input {
+  width: 300px;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  color: #333;
+  transition: 0.3s;
+}
+
+.container input:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Webcam box */
+.container video {
+  margin-top: 15px;
+  width: 320px;
+  border-radius: 12px;
+  border: 2px solid white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+.container button {
+  width: 300px;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  transition: 0.3s ease;
+}
+
+.container button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Preview image */
+.container img {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+}

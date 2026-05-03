@@ -1,0 +1,71 @@
+/* 🔒 Disable selection ONLY where needed */
+.exam, .dashboard {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f6fa;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 40px;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+/* Card hover */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background: #3498db;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Video */
+video {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Inputs (important fix) */
+input, textarea {
+  user-select: text !important;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .card {
+    width: 90%;
+  }
+}
