@@ -297,16 +297,47 @@ function Exam() {
   useEffect(() => {
     if (!allowed) return;
 
-    const handle = () => {
+    let submitted = false;
+
+    const safeSubmit = () => {
+      if (submitted) return;
+      submitted = true;
+
+      alert("🚫 Tab switching or window change detected!");
+      submitExam();
+    };
+
+    const handleVisibility = () => {
       if (document.hidden) {
-        alert("🚫 Tab switched!");
-        submitExam();
+        safeSubmit();
       }
     };
 
-    document.addEventListener("visibilitychange", handle);
+    const handleBlur = () => {
+      safeSubmit();
+    };
 
-    return () => document.removeEventListener("visibilitychange", handle);
+    const handleKeyDown = (e) => {
+      if (
+        (e.ctrlKey && e.key === "Tab") ||
+        e.key === "Escape" ||
+        e.key === "Meta" ||
+        e.altKey
+      ) {
+        e.preventDefault();
+        safeSubmit();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibility);
+    window.addEventListener("blur", handleBlur);
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibility);
+      window.removeEventListener("blur", handleBlur);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [allowed, submitExam]);
 
   const handleAnswer = (i, opt) => {

@@ -24,13 +24,21 @@ db.connect((err) => {
 
 /* LOGIN */
 app.post("/login", (req, res) => {
-  const { email, password } = req.body;
+  let { email, password } = req.body;
+
+  // 🔥 FIX: clean input
+  email = String(email).trim().toLowerCase();
+  password = String(password).trim();
+
+  console.log("Login Input:", email, password);
 
   db.query(
-    "SELECT * FROM users WHERE email=? AND password=?",
+    "SELECT * FROM users WHERE LOWER(email)=? AND password=?",
     [email, password],
     (err, result) => {
       if (err) return res.json({ status: "error", message: err.message });
+
+      console.log("DB Result:", result);
 
       if (result.length > 0) {
         res.json({ status: "success", user: result[0] });

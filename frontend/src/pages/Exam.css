@@ -57,7 +57,7 @@ video {
   padding: 10px;
   margin: 6px 0;
   border: 2px solid transparent;
-  background: #f1f3f6;
+  background :#e74c3c;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.25s ease;
